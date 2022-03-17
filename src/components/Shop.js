@@ -1,14 +1,32 @@
-import ShopList from "./ShopList";
+import { connect } from "react-redux";
+import { fetchItem } from "../actions/actions";
+import { useEffect } from "react";
+import ShopItem from "./ShopItem";
 
-const ShopList = () => {
+const mapStateToProps = (state) => ({
+  product: state.product,
+  isLoading: state.isLoading,
+  error: state.error,
+});
+
+function ShopList(props) {
+  const { fetchItem, isLoading, product, error } = props;
+  useEffect(() => {
+    fetchItem();
+  }, [fetchItem]);
+  console.log(props);
+
   return (
     <div>
-      <div>
-        <h1>Today's Feature Collection</h1>
-      </div>
-      <div>
-        <ShopList />
-      </div>
+      {isLoading ? "LOADING PRODUCTS" : ""}
+      {error ? error : ""}
+      {product.length > 0
+        ? product.map((item) => {
+            return <ShopItem shop={item} key={item._id} />;
+          })
+        : ""}
     </div>
   );
-};
+}
+
+export default connect(mapStateToProps, { fetchItem })(ShopList);

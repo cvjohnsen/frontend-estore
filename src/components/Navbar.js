@@ -9,6 +9,9 @@ const NavBar = () => {
       <Link to="/shop" style={{ color: "white" }}>
         Shop
       </Link>
+      <Link to="/cart" style={{ color: "white" }}>
+        Cart
+      </Link>
     </nav>
   );
 };
