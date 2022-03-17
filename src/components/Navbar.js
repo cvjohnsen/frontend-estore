@@ -6,8 +6,8 @@ const NavBar = () => {
       <Link to="/" style={{ color: "white" }}>
         Home
       </Link>
-      <Link to="/affirmation" style={{ color: "white" }}>
-        Affirmation
+      <Link to="/shop" style={{ color: "white" }}>
+        Shop
       </Link>
     </nav>
   );
@@ -15,7 +15,7 @@ const NavBar = () => {
 
 const container = {
   display: "flex",
-  justifyContent: "space-around",
+  justifyContent: "space-evenly",
   backgroundColor: "#353535",
   color: "white",
   height: "40px",

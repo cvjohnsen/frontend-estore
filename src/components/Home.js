@@ -4,11 +4,19 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <Link to="/">
-        <img src={logo} width="100px" alt="logo" />
-      </Link>
+      <div style={image}>
+        <Link to="/">
+          <img src={logo} width="300px" alt="logo" />
+        </Link>
+      </div>
+      ;
     </div>
   );
+};
+
+const image = {
+  marginTop: "50px",
+  height: "450px",
 };
 
 export default Home;
