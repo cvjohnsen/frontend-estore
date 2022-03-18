@@ -1,3 +1,19 @@
+Wireframe:
+
+Home Page:
+![E_Store_Project](https://user-images.githubusercontent.com/79131508/159068684-84a7cacb-096f-405f-b73f-1c654b766383.jpg)
+Shop Page:
+![E_Store_Project 2](https://user-images.githubusercontent.com/79131508/159068687-4e446256-5863-4053-8ba3-7a5290b66295.jpg)
+
+Netlify:
+https://pedantic-mestorf-e9130e.netlify.app
+
+API:
+https://cvj-estore.herokuapp.com/product
+
+Backend Github:
+https://github.com/cvjohnsen/backend-estore.git
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
