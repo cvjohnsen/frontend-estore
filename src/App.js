@@ -6,7 +6,7 @@ import Shop from "./components/Shop";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-// import Cart from "./components/Cart";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <NavBar />
       <div className="Body">
         <Switch>
-          {/* <Route path="/cart">
+          <Route path="/cart">
             <Cart />
-          </Route> */}
+          </Route>
           <Route path="/shop">
             <Shop />
           </Route>

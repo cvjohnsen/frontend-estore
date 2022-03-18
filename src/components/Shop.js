@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
   error: state.error,
 });
 
-function ShopList(props) {
+function Shop(props) {
   const { fetchItem, isLoading, product, error } = props;
   useEffect(() => {
     fetchItem();
@@ -29,4 +29,4 @@ function ShopList(props) {
   );
 }
 
-export default connect(mapStateToProps, { fetchItem })(ShopList);
+export default connect(mapStateToProps, { fetchItem })(Shop);

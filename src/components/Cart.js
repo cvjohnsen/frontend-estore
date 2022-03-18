@@ -1,26 +1,31 @@
-// import { connect } from "react-redux";
-// import { addCart } from "../actions/actions";
+import { connect } from "react-redux";
+import ShopItem from "./ShopItem";
 
-// const Cart = (props) => {
-//   console.log(props);
-//   const handleCart = (e) => {
-//     props.addCart(e.target.id);
-//   };
 
-//   return (
-//     <div>
-//       <div>
-//         <img src={props.shop.img} alt="clothes" />
-//       </div>
-//       <div>
-//         <button id={props.shop.img} onClick={handleCart}>
-//           Add to Cart
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
+const mapStateToProps = (state) => ({
+  cart: state.cart,
+  isLoading: state.isLoading,
+  error: state.error,
+});
 
-// // const style = {};
+function Cart(props) {
+  const { isLoading, cart, error } = props;
 
-// export default connect(null, { addCart })(Cart);
+ 
+
+  return (
+    <div>
+      {isLoading ? "LOADING PRODUCTS" : ""}
+      {error ? error : ""}
+      {cart.length > 0
+        ? cart.map((item) => {
+            return <ShopItem shop={item} key={item._id} />;
+          })
+        : ""}
+
+      
+    </div>
+  );
+}
+
+export default connect(mapStateToProps, {})(Cart);

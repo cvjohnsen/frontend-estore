@@ -23,6 +23,8 @@ const container = {
   color: "white",
   height: "40px",
   fontFamily: "Architects Daughter",
+  marginBottom: "100px",
+  padding: "30px",
 };
 
 export default NavBar;
