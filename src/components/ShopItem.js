@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { addBuy } from "../actions/actions";
 import { removeBuy } from "../actions/actions";
 import { matchPath, useLocation } from "react-router";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 const ShopItem = (props) => {
   console.log(props);
@@ -16,8 +16,6 @@ const ShopItem = (props) => {
   const handleRemove = (e) => {
     props.removeBuy(props.shop);
   };
-
-  // id={props.shop.id}
 
   return (
     <div id={props.shop.id}>
