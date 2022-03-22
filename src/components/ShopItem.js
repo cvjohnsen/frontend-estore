@@ -18,7 +18,7 @@ const ShopItem = (props) => {
   };
 
   return (
-    <div id={props.shop.id} style={styles.card}>
+    <div id={props.shop.id}>
       {/* <img src={props.shop.img} width="300px" /> */}
       {/* <h5>{props.shop.name}</h5>
       <h5>{props.shop.description}</h5>
@@ -29,8 +29,7 @@ const ShopItem = (props) => {
       {location.pathname === "/cart" && (
         <button onClick={handleRemove}>Remove</button>
       )} */}
-
-      <Card style={{ width: "18rem" }}>
+      <Card style={styles.cards}>
         <Card.Img variant="top" src={props.shop.img} width="200px" />
 
         <Card.Body>
@@ -58,11 +57,12 @@ const ShopItem = (props) => {
 };
 
 const styles = {
-  card: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "spaceAround",
-    flexDirection: "row",
+  cards: {
+    width: "18rem",
+    marginLeft: " 400px",
+    // display: "flex",
+    // justifyContent: "space-evenly",
+    // flexWrap: "wrap",
   },
 };
 

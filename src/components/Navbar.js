@@ -13,7 +13,7 @@ import { BsFillBagDashFill } from "react-icons/bs";
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" style={nav}>
       <Container>
         <Navbar.Brand href="#home" as={Link} to="/" color="white">
           CVJ
@@ -52,7 +52,7 @@ const NavBar = () => {
               </Badge>
             </Dropdown.Toggle>
             <Dropdown.Menu style={{ minWidth: 370 }}>
-              <span style={{ padding: 10 }}>Empty</span>
+              <span style={{ padding: 10 }}>Check Out</span>
             </Dropdown.Menu>
           </Dropdown>
         </Nav>
@@ -61,15 +61,9 @@ const NavBar = () => {
   );
 };
 
-// const container = {
-//   display: "flex",
-//   justifyContent: "space-evenly",
-//   backgroundColor: "#353535",
-//   color: "white",
-//   height: "40px",
-//   fontFamily: "Anton",
-//   marginBottom: "30px",
-//   padding: "30px",
-// };
+const nav = {
+  marginBottom: "30px",
+  padding: "30px",
+};
 
 export default NavBar;
