@@ -14,6 +14,12 @@ https://cvj-estore.herokuapp.com/product
 Backend Github:
 https://github.com/cvjohnsen/backend-estore.git
 
+*Site features, cycle through Images from the API implemnting useEffect. Products can be added into cart and removed.
+
+*Upcoming Feature, be able to add quantity and add total to check out. Implement more stytling and responsive elements.
+
+*Wireframe is created on Adobe Illustrator.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
