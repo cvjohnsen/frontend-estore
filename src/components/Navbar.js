@@ -23,7 +23,7 @@ const container = {
   color: "white",
   height: "40px",
   fontFamily: "Anton",
-  marginBottom: "100px",
+  marginBottom: "30px",
   padding: "30px",
 };
 
