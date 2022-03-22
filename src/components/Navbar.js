@@ -1,30 +1,75 @@
 import { Link } from "react-router-dom";
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Dropdown,
+  Badge,
+} from "react-bootstrap";
+import { BsFillBagDashFill } from "react-icons/bs";
 
 const NavBar = () => {
   return (
-    <nav style={container}>
-      <Link to="/" style={{ color: "white" }}>
-        Home
-      </Link>
-      <Link to="/shop" style={{ color: "white" }}>
-        Shop
-      </Link>
-      <Link to="/cart" style={{ color: "white" }}>
-        Cart
-      </Link>
-    </nav>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home" as={Link} to="/" color="white">
+          CVJ
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/" color="white">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/shop">
+              Shop
+            </Nav.Link>
+            <NavDropdown title="Products" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/shop">
+                Women's
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form className="d-flex">
+            <FormControl
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <input type="submit" />
+          </Form>
+        </Navbar.Collapse>
+        <Nav>
+          <Dropdown>
+            <Dropdown.Toggle variant="dark">
+              <BsFillBagDashFill color="darkGray" fontSize="25px" />
+              <Badge as={Link} to="/cart" color="gray">
+                {0}
+              </Badge>
+            </Dropdown.Toggle>
+            <Dropdown.Menu style={{ minWidth: 370 }}>
+              <span style={{ padding: 10 }}>Empty</span>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 
-const container = {
-  display: "flex",
-  justifyContent: "space-evenly",
-  backgroundColor: "#353535",
-  color: "white",
-  height: "40px",
-  fontFamily: "Anton",
-  marginBottom: "30px",
-  padding: "30px",
-};
+// const container = {
+//   display: "flex",
+//   justifyContent: "space-evenly",
+//   backgroundColor: "#353535",
+//   color: "white",
+//   height: "40px",
+//   fontFamily: "Anton",
+//   marginBottom: "30px",
+//   padding: "30px",
+// };
 
 export default NavBar;
