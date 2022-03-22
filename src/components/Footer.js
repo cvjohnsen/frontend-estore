@@ -14,8 +14,10 @@ const container = {
   color: "#0F0F0F",
   height: "40px",
   marginTop: "300px",
-  fontFamily: "Shadows Into Light Two",
+  fontFamily: "Anton",
   textAlign: "center",
 };
 
 export default Footer;
+
+

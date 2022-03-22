@@ -22,7 +22,7 @@ const container = {
   backgroundColor: "#353535",
   color: "white",
   height: "40px",
-  fontFamily: "Architects Daughter",
+  fontFamily: "Anton",
   marginBottom: "100px",
   padding: "30px",
 };

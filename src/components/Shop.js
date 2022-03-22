@@ -3,6 +3,8 @@ import { fetchItem } from "../actions/actions";
 import { useEffect } from "react";
 import ShopItem from "./ShopItem";
 
+
+
 const mapStateToProps = (state) => ({
   product: state.product,
   isLoading: state.isLoading,
@@ -25,6 +27,7 @@ function Shop(props) {
             return <ShopItem shop={item} key={item._id} />;
           })
         : ""}
+
     </div>
   );
 }
