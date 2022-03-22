@@ -14,7 +14,7 @@ https://cvj-estore.herokuapp.com/product
 Backend Github:
 https://github.com/cvjohnsen/backend-estore.git
 
-*Site features, cycle through Images from the API implemnting useEffect. Products can be added into cart and removed.
+*Site features, cycle through Images from the API implemnting useEffect. Products can be added into cart and removed. Icons and Shein image link to external sites.
 
 *Upcoming Feature, be able to add quantity and add total to check out. Implement more stytling and responsive elements.
 
