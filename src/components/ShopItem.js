@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { addBuy } from "../actions/actions";
 import { removeBuy } from "../actions/actions";
 import { matchPath, useLocation } from "react-router";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
 
 const ShopItem = (props) => {
   console.log(props);
@@ -17,18 +17,11 @@ const ShopItem = (props) => {
     props.removeBuy(props.shop);
   };
 
+  // id={props.shop.id}
+  // style={styles.container}
+
   return (
-    <div id={props.shop.id}>
-      {/* <img src={props.shop.img} width="300px" /> */}
-      {/* <h5>{props.shop.name}</h5>
-      <h5>{props.shop.description}</h5>
-      <h5>${props.shop.price}.99</h5> */}
-      {/* {location.pathname === "/shop" && (
-        <button onClick={handleAdd}>Add to Cart</button>
-      )}
-      {location.pathname === "/cart" && (
-        <button onClick={handleRemove}>Remove</button>
-      )} */}
+    <div>
       <Card style={styles.cards}>
         <Card.Img variant="top" src={props.shop.img} width="200px" />
 
@@ -59,10 +52,6 @@ const ShopItem = (props) => {
 const styles = {
   cards: {
     width: "18rem",
-    marginLeft: " 400px",
-    // display: "flex",
-    // justifyContent: "space-evenly",
-    // flexWrap: "wrap",
   },
 };
 

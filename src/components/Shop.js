@@ -17,7 +17,7 @@ function Shop(props) {
   console.log(props);
 
   return (
-    <div>
+    <div className="container">
       {isLoading ? "LOADING PRODUCTS" : ""}
       {error ? error : ""}
       {product.length > 0
