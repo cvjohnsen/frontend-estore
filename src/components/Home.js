@@ -17,7 +17,7 @@ const Home = () => {
           rel="noreferrer"
           alt="shein"
         >
-          <img src={promo} alt="promo" width="600px" />
+          <img src={promo} alt="promo" class="img-fluid" width="600px" />
         </a>
       </div>
     </div>
