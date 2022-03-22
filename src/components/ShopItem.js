@@ -18,10 +18,9 @@ const ShopItem = (props) => {
   };
 
   // id={props.shop.id}
-  // style={styles.container}
 
   return (
-    <div>
+    <div id={props.shop.id}>
       <Card style={styles.cards}>
         <Card.Img variant="top" src={props.shop.img} width="200px" />
 

@@ -11,7 +11,7 @@ function Cart(props) {
   const { isLoading, cart, error } = props;
 
   return (
-    <div style={styles.cart}>
+    <div style={styles.cart} className="container">
       {isLoading ? "LOADING PRODUCTS" : ""}
       {error ? error : ""}
       {cart.length > 0
